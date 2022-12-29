@@ -17,7 +17,9 @@ void init(Stack *s) {
 }
 
 int main() {
-    Stack stack = {{7, 4, 1}, 3};
+    Stack stack;
+    Stack *st = &stack;
+    init(st);
     print(&stack);
     return 0;
 }
