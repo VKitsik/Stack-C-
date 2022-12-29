@@ -12,9 +12,12 @@ void print(Stack * s) {
     printf("\n");
 }
 
+void init(Stack *s) {
+    s->n = 0;
+}
+
 int main() {
     Stack stack = {{7, 4, 1}, 3};
-
     print(&stack);
     return 0;
 }
