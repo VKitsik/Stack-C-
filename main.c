@@ -16,10 +16,22 @@ void init(Stack *s) {
     s->n = 0;
 }
 
+void push(Stack *st, Data data) {
+    st->a[st->n] = data;
+    st->n++;
+}
+
 int main() {
     Stack stack;
     Stack *st = &stack;
     init(st);
     print(&stack);
+
+    push(st, 5);
+    print(st);      // 5
+    push(st, 17);
+    print(st);      // 5 17
+    push(st, -3);
+    print(st);
     return 0;
 }
