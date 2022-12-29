@@ -21,6 +21,12 @@ void push(Stack *st, Data data) {
     st->n++;
 }
 
+Data pop(Stack * st) {
+    st->n --;
+    Data res = st->a[st->n];
+    return res;
+}
+
 int main() {
     Stack stack;
     Stack *st = &stack;
